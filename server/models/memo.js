@@ -3,14 +3,22 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var MemoSchema = new Schema({
-    text: {
-        type: String,
+    title: {
+        type: String
+    },
+    contents: {
+        type: String
     },
     createdAt: {
         type: Date
     },
     updatedAt: {
         type: Date
+    },
+    isArchived: {
+        type: Boolean,
+        default: false,
+        required: true
     }
 });
 
